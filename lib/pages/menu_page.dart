@@ -45,7 +45,7 @@ class _MenuPageState extends State<MenuPage> {
             onPressed: () {
               Navigator.pushNamed(context, '/cartpage');
             },
-            icon: Icon(Icons.shopping_cart),
+            icon: Badge.count(count: shop.cart.length, child: const Icon(Icons.shopping_cart)),
           ),
         ],
       ),
@@ -118,7 +118,7 @@ class _MenuPageState extends State<MenuPage> {
 
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(right: 25.0),
+              padding: const EdgeInsets.only(right: 0.0),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: foodMenu.length,
