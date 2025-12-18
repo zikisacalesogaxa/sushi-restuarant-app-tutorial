@@ -184,7 +184,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
                 const SizedBox(height: 20),
 
-                MyButton(text: "Add To Cart", onTap: addToCart),
+                Button(text: "Add To Cart", onTap: addToCart, enabled: true,),
               ],
             ),
           ),

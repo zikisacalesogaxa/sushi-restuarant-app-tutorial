@@ -38,14 +38,16 @@ class _MenuPageState extends State<MenuPage> {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey[800],
         elevation: 0,
-        leading: const Icon(Icons.menu),
         title: const Text('Tokyo'),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.pushNamed(context, '/cartpage');
             },
-            icon: Badge.count(count: shop.cart.length, child: const Icon(Icons.shopping_cart)),
+            icon: Badge.count(
+              count: shop.cart.length,
+              child: const Icon(Icons.shopping_cart),
+            ),
           ),
         ],
       ),
@@ -73,10 +75,10 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    MyButton(text: "Redeem", onTap: () {}),
+                    Button(text: "Redeem", onTap: () {}, enabled: true),
                   ],
                 ),
-                Image.asset('lib/images/three_sushi.png', height: 100),
+                Image.asset('assets/images/three_sushi.png', height: 100),
               ],
             ),
           ),
@@ -95,7 +97,7 @@ class _MenuPageState extends State<MenuPage> {
                   borderSide: BorderSide(color: Colors.white),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                hintText: "Search here...",
+                labelText: "Search here",
               ),
             ),
           ),
@@ -145,7 +147,7 @@ class _MenuPageState extends State<MenuPage> {
               children: [
                 Row(
                   children: [
-                    Image.asset('lib/images/three_sushi.png', height: 60),
+                    Image.asset('assets/images/three_sushi.png', height: 60),
 
                     const SizedBox(width: 20),
 
@@ -173,6 +175,17 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(color: primaryColor),
+              child: const Text(''),
+            ),
+          ],
+        ),
       ),
     );
   }

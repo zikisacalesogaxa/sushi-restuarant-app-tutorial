@@ -6,25 +6,25 @@ class Shop extends ChangeNotifier {
     Food(
       name: "Nigiri",
       price: "18.00",
-      imagePath: "lib/images/nigiri.png",
+      imagePath: "assets/images/nigiri.png",
       rating: "4.9",
     ),
     Food(
       name: "Sashimi",
       price: "20.00",
-      imagePath: "lib/images/sashimi.png",
+      imagePath: "assets/images/sashimi.png",
       rating: "5.0",
     ),
     Food(
       name: "Sushi Eggs",
       price: "21.00",
-      imagePath: "lib/images/sushi_eggs.png",
+      imagePath: "assets/images/sushi_eggs.png",
       rating: "2.9",
     ),
     Food(
       name: "Temaki",
       price: "30.00",
-      imagePath: "lib/images/temaki.png",
+      imagePath: "assets/images/temaki.png",
       rating: "4.9",
     ),
   ];

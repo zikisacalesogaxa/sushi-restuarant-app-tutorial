@@ -31,9 +31,7 @@ class IntroPage extends StatelessWidget {
             // icon
             Padding(
               padding: const EdgeInsets.all(0.0),
-              child: Image.asset('lib/images/sushi_eggs.png',
-                height: 250,
-              ),
+              child: Image.asset('assets/images/sushi_eggs.png', height: 250),
             ),
 
             // title
@@ -57,9 +55,13 @@ class IntroPage extends StatelessWidget {
             const SizedBox(height: 25),
 
             // get started button
-            MyButton(text: 'Get Started', onTap: () {
-              Navigator.pushNamed(context, '/menupage');
-            },),
+            Button(
+              text: 'Get Started',
+              onTap: () {
+                Navigator.pushNamed(context, '/menupage');
+              },
+              enabled: false,
+            ),
           ],
         ),
       ),
